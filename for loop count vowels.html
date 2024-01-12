@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div id="a"></div>
+        <div id="e"></div>
+        <div id="i"></div>
+        <div id="o"></div>
+        <div id="u"></div>
+        <div id="y"></div>
+        <div id="æ"></div>
+        <div id="ø"></div>
+        <div id="å"></div>
+        <div></div>
+        <div onclick="printVowels('KVA gjorde du igår på pcen mæ ølen?')">Trykk her for å se hvor mange vokaler det er i denne setningen: 'KVA gjorde du igår på pcen mæ ølen?'</div>
+        <script>
+            let aCounter = 0;
+            let eCounter = 0;
+            let iCounter = 0;
+            let oCounter = 0;
+            let uCounter = 0;
+            let yCounter = 0;
+            let æCounter = 0;
+            let øCounter = 0;
+            let åCounter = 0;
+            let char = '';
+
+            function printVowels(inputString){
+                for(let i = 0; i<=inputString.length; i++){
+                    char = inputString[i].toLowerCase();
+                    if (char === 'a'){
+                        aCounter++
+                        document.getElementById('a').innerHTML = 'Vowels a = ' + aCounter;
+                    }
+                    else if (char === 'e'){
+                        eCounter++
+                        document.getElementById('e').innerHTML = 'Vowels e = ' + eCounter;
+                    } 
+                    else if (char === 'i'){
+                        iCounter++
+                        document.getElementById('i').innerHTML = 'Vowels i = ' + iCounter;
+                    } 
+                    else if (char === 'o'){
+                        oCounter++
+                        document.getElementById('o').innerHTML = 'Vowels o = ' + oCounter;
+                    } 
+                    else if (char === 'u'){
+                        uCounter++
+                        document.getElementById('u').innerHTML = 'Vowels u = ' + uCounter;
+                    } 
+                    else if (char === 'y'){
+                        yCounter++
+                        document.getElementById('y').innerHTML = 'Vowels y = ' + yCounter;
+                    }
+                    else if (char === 'æ'){
+                        æCounter++
+                        document.getElementById('æ').innerHTML = 'Vowels æ = ' + æCounter;
+                    }
+                    else if (char === 'ø'){
+                        øCounter++
+                        document.getElementById('ø').innerHTML = 'Vowels ø = ' + øCounter;
+                    } 
+                    else if (char === 'å'){
+                        åCounter++
+                        document.getElementById('å').innerHTML = 'Vowels å = ' + åCounter;
+                    } 
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
